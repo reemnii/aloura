@@ -11,7 +11,7 @@ export default function Page() {
   return (
     <>
       {bannerVisible && <Banner onClose={() => setBannerVisible(false)} />}
-      <Navbar bannerVisible={bannerVisible} />
+      <Navbar />
       <Hero />
     </>
   );

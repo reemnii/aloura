@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
-export default function Navbar({ bannerVisible = true }) {
+export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -10,25 +10,28 @@ export default function Navbar({ bannerVisible = true }) {
       setScrolled(window.scrollY > 20);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const linkClass = scrolled
+    ? "text-[#5c4032]/80 hover:text-[#ac795a]"
+    : "text-[#5c4032]/75 hover:text-[#ac795a]";
+
   return (
     <nav
-      className={`fixed left-0 right-0 z-50 transition-all duration-500 ${
-        bannerVisible ? "top-[3.75rem]" : "top-3"
-      } ${
+      className={`sticky top-0 z-50 transition-all duration-500 ease-out ${
         scrolled
-          ? "bg-[#fef6e9]/95 backdrop-blur-md border-b border-[#ac795a]/20 shadow-sm"
-          : "bg-transparent"
+          ? "bg-[#f6e7d3]/95 backdrop-blur-md border-b border-[#ac795a]/20 shadow-sm"
+          : "bg-[#f6e7d3]/88 backdrop-blur-sm border-b border-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between h-20">
         <div className="flex items-center gap-2">
           <span
-            className={`font-serif text-3xl font-light italic tracking-widest transition-colors duration-300 ${
-              scrolled ? "text-[#ac795a]" : "text-[#fef6e9]"
+            className={`font-serif text-3xl font-light italic tracking-widest transition-colors duration-500 ${
+              scrolled ? "text-[#ac795a]" : "text-[#a47454]"
             }`}
           >
             Aloura
@@ -41,26 +44,18 @@ export default function Navbar({ bannerVisible = true }) {
             <a
               key={link}
               href="#"
-              className={`text-sm tracking-[0.15em] uppercase transition-colors duration-200 ${
-                scrolled
-                  ? "text-[#5c4032]/80 hover:text-[#ac795a]"
-                  : "text-[#fef6e9]/80 hover:text-[#fef6e9]"
-              }`}
+              className={`text-sm tracking-[0.15em] uppercase transition-colors duration-200 ${linkClass}`}
             >
               {link}
             </a>
           ))}
         </div>
 
-        <button className="hidden md:inline-flex items-center gap-2 bg-[#ac795a] hover:bg-[#8f6348] border border-[#ac795a] text-[#fef6e9] text-sm tracking-widest uppercase px-5 py-2.5 rounded-full backdrop-blur-sm transition-all duration-300">
+        <button className="hidden md:inline-flex items-center gap-2 bg-[#ac795a] hover:bg-[#8f6348] border border-[#ac795a] text-[#fef6e9] text-sm tracking-widest uppercase px-5 py-2.5 rounded-full backdrop-blur-sm transition-all duration-300 shadow-sm">
           Shop Now
         </button>
 
-        <button
-          className={`md:hidden flex flex-col gap-1.5 transition-colors duration-300 ${
-            scrolled ? "text-[#ac795a]" : "text-[#fef6e9]"
-          }`}
-        >
+        <button className="md:hidden flex flex-col gap-1.5 text-[#ac795a] transition-colors duration-300">
           <span className="block w-6 h-px bg-current" />
           <span className="block w-4 h-px bg-current" />
           <span className="block w-6 h-px bg-current" />

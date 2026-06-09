@@ -1,12 +1,4 @@
-"use client";
-
-import { useState } from "react";
-
-export default function Banner() {
-  const [visible, setVisible] = useState(true);
-
-  if (!visible) return null;
-
+export default function Banner({ onClose }) {
   return (
     <div className="relative bg-[#ac795a] text-[#fef6e9] overflow-hidden">
 
@@ -36,7 +28,7 @@ export default function Banner() {
 
         {/* Close button */}
         <button
-          onClick={() => setVisible(false)}
+          onClick={onClose}
           className="absolute right-4 text-[#fef6e9]/70 hover:text-[#fef6e9] transition-colors text-lg leading-none"
           aria-label="Dismiss banner"
         >

@@ -3,14 +3,17 @@
 :root {
   --background: #fef6e9;
   --foreground: #5c4032;
+  --font-serif-stack: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --font-sans-stack: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --font-mono-stack: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-cormorant);
-  --font-serif: var(--font-cormorant);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-sans-stack);
+  --font-serif: var(--font-serif-stack);
+  --font-mono: var(--font-mono-stack);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,7 +26,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-cormorant), Georgia, serif;
+  font-family: var(--font-serif-stack);
 }
 
 @keyframes banner-marquee {

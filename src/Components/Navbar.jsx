@@ -43,7 +43,7 @@ export default function Navbar() {
           {["Collections", "Bespoke", "Lookbook", "About"].map((link) => (
             <a
               key={link}
-              href="#"
+              href={link === "Collections" ? "#featured-collections" : "#"}
               className={`text-sm tracking-[0.15em] uppercase transition-colors duration-200 ${linkClass}`}
             >
               {link}

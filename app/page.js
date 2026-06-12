@@ -6,6 +6,7 @@ import Hero from "../src/Components/Hero.jsx";
 import Banner from "../src/Components/Banner.jsx";
 import FeaturedCollection from "../src/Components/FeaturedCollection.jsx";
 import WhyAloura from "../src/Components/WhyAloura.jsx";
+import Testimonials from "../src/Components/Testimonials.jsx";
 
 export default function Page() {
   const [bannerVisible, setBannerVisible] = useState(true);
@@ -17,6 +18,7 @@ export default function Page() {
       <Hero />
       <FeaturedCollection/>
       <WhyAloura />
+      <Testimonials />
     </>
   );
 }

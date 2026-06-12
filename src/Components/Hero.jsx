@@ -35,7 +35,7 @@ export default function Hero() {
         </div>
 
         {/* Title */}
-        <h1 className="text-[#fef6e9] leading-[0.92] mb-6 max-w-4xl">
+        <h1 className="text-white leading-[0.92] mb-6 max-w-4xl">
           <span className="block text-6xl sm:text-7xl lg:text-[7rem] font-light tracking-tight">
             Every Reflection
           </span>
@@ -45,7 +45,7 @@ export default function Hero() {
         </h1>
 
         {/* Description */}
-        <p className="text-[#fef6e9]/80 text-base sm:text-lg max-w-lg leading-relaxed mb-12 tracking-wide">
+        <p className="text-white/70 text-base sm:text-lg max-w-lg leading-relaxed mb-12 tracking-wide">
           Handcrafted mirrors designed to transform your space — where artistry meets the light you live in.
         </p>
 

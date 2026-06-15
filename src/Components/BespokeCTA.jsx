@@ -1,6 +1,6 @@
 export default function BespokeCTA() {
   return (
-    <section className="relative overflow-hidden py-20 px-6 lg:px-16">
+    <section id="bespoke-cta" className="relative overflow-hidden py-20 px-6 lg:px-16">
       <div className="absolute inset-0 bg-gradient-to-br from-[#5c4032] via-[#8f6348] to-[#ac795a]" />
       <div className="absolute inset-0 bg-[#fef6e9]/8" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(254,246,233,0.18)_0%,transparent_55%)]" />

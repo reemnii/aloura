@@ -4,6 +4,13 @@ import { useEffect, useState } from "react";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const navLinks = [
+    { label: "Collections", href: "#featured-collections" },
+    { label: "Why Aloura", href: "#why-aloura" },
+    { label: "Bespoke", href: "#bespoke-cta" },
+    { label: "Testimonials", href: "#testimonials" },
+    { label: "Contact", href: "#contact-us" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,7 +36,6 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between h-20">
         <div className="flex items-center gap-2">
-          <span className="hidden sm:block w-8 h-px bg-[#ac795a]/70" />
           <span
             className={`font-serif text-3xl font-light italic tracking-widest transition-colors duration-500 ${
               scrolled ? "text-[#8f6348]" : "text-[#a47454]"
@@ -38,17 +44,16 @@ export default function Navbar() {
             Aloura
           </span>
           <span className="w-1.5 h-1.5 rounded-full bg-[#ac795a]" />
-          <span className="hidden sm:block w-8 h-px bg-[#ac795a]/70" />
         </div>
 
         <div className="hidden md:flex items-center gap-10">
-          {["Collections", "Bespoke", "Lookbook", "About"].map((link) => (
+          {navLinks.map((link) => (
             <a
-              key={link}
-              href={link === "Collections" ? "#featured-collections" : "#"}
+              key={link.label}
+              href={link.href}
               className={`font-sans text-[11px] tracking-[0.22em] uppercase transition-colors duration-200 ${linkClass}`}
             >
-              {link}
+              {link.label}
             </a>
           ))}
         </div>

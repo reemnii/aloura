@@ -49,7 +49,7 @@ export default function SearchBar() {
         {query && (
           <button
             onClick={() => setQuery("")}
-            className="text-[#5c4032]/50 hover:text-[#ac795a] transition-colors"
+            className="cursor-pointer text-[#5c4032]/50 hover:text-[#ac795a] transition-colors"
           >
             <svg
               className="w-3.5 h-3.5"
@@ -67,7 +67,7 @@ export default function SearchBar() {
         <span className="w-px h-4 bg-[#ac795a]/30" />
 
         {/* Action */}
-        <button className="text-[#5c4032]/70 hover:text-[#ac795a] transition-colors text-xs tracking-widest uppercase whitespace-nowrap">
+        <button className="cursor-pointer text-[#5c4032]/70 hover:text-[#ac795a] transition-colors text-xs tracking-widest uppercase whitespace-nowrap">
           Explore
         </button>
       </div>

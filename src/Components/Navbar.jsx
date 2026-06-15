@@ -23,20 +23,22 @@ export default function Navbar() {
     <nav
       className={`sticky top-0 z-50 transition-all duration-500 ease-out ${
         scrolled
-          ? "bg-[#f6e7d3]/95 backdrop-blur-md border-b border-[#ac795a]/20 shadow-sm"
-          : "bg-[#f6e7d3]/88 backdrop-blur-sm border-b border-transparent"
+          ? "bg-[#fef6e9]/96 backdrop-blur-sm border-b border-[#ac795a]/15 shadow-[0_10px_30px_rgba(92,64,50,0.05)]"
+          : "bg-[#fef6e9]/90 backdrop-blur-sm border-b border-transparent shadow-none"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between h-20">
         <div className="flex items-center gap-2">
+          <span className="hidden sm:block w-8 h-px bg-[#ac795a]/70" />
           <span
             className={`font-serif text-3xl font-light italic tracking-widest transition-colors duration-500 ${
-              scrolled ? "text-[#ac795a]" : "text-[#a47454]"
+              scrolled ? "text-[#8f6348]" : "text-[#a47454]"
             }`}
           >
             Aloura
           </span>
           <span className="w-1.5 h-1.5 rounded-full bg-[#ac795a]" />
+          <span className="hidden sm:block w-8 h-px bg-[#ac795a]/70" />
         </div>
 
         <div className="hidden md:flex items-center gap-10">
@@ -44,18 +46,18 @@ export default function Navbar() {
             <a
               key={link}
               href={link === "Collections" ? "#featured-collections" : "#"}
-              className={`text-sm tracking-[0.15em] uppercase transition-colors duration-200 ${linkClass}`}
+              className={`font-sans text-[11px] tracking-[0.22em] uppercase transition-colors duration-200 ${linkClass}`}
             >
               {link}
             </a>
           ))}
         </div>
 
-        <button className="hidden md:inline-flex items-center gap-2 bg-[#ac795a] hover:bg-[#8f6348] border border-[#ac795a] text-[#fef6e9] text-sm tracking-widest uppercase px-5 py-2.5 rounded-full backdrop-blur-sm transition-all duration-300 shadow-sm">
+        <button className="hidden md:inline-flex cursor-pointer items-center gap-2 bg-[#ac795a] hover:bg-[#8f6348] border border-[#ac795a] text-[#fef6e9] text-xs tracking-widest uppercase px-5 py-2.5 rounded-full backdrop-blur-sm transition-all duration-300 shadow-sm font-sans">
           Shop Now
         </button>
 
-        <button className="md:hidden flex flex-col gap-1.5 text-[#ac795a] transition-colors duration-300">
+        <button className="md:hidden flex cursor-pointer flex-col gap-1.5 text-[#ac795a] transition-colors duration-300">
           <span className="block w-6 h-px bg-current" />
           <span className="block w-4 h-px bg-current" />
           <span className="block w-6 h-px bg-current" />

@@ -103,7 +103,7 @@ export default function FeaturedCollection() {
                 <span className="font-serif text-2xl text-[#fef6e9] font-light">
                   {featured[0].price}
                 </span>
-                <button className="bg-[#fef6e9]/15 hover:bg-[#fef6e9]/25 border border-[#fef6e9]/25 text-[#fef6e9] text-xs tracking-widest uppercase px-5 py-2.5 rounded-full backdrop-blur-sm transition-all duration-300 font-sans">
+                <button className="cursor-pointer bg-[#fef6e9]/15 hover:bg-[#fef6e9]/25 border border-[#fef6e9]/25 text-[#fef6e9] text-xs tracking-widest uppercase px-5 py-2.5 rounded-full backdrop-blur-sm transition-all duration-300 font-sans">
                   View piece
                 </button>
               </div>
@@ -146,7 +146,7 @@ export default function FeaturedCollection() {
                 </div>
 
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[#5c4032]/18">
-                  <button className="bg-[#fef6e9] text-[#5c4032] text-xs tracking-widest uppercase px-6 py-3 rounded-full font-sans hover:bg-[#ac795a] hover:text-[#fef6e9] transition-colors duration-300 shadow-lg">
+                  <button className="cursor-pointer bg-[#fef6e9] text-[#5c4032] text-xs tracking-widest uppercase px-6 py-3 rounded-full font-sans hover:bg-[#ac795a] hover:text-[#fef6e9] transition-colors duration-300 shadow-lg">
                     View piece
                   </button>
                 </div>

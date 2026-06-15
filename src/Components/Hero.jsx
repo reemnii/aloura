@@ -57,7 +57,7 @@ export default function Hero() {
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row items-center gap-4">
 
-          <button className="group inline-flex items-center gap-3 bg-[#ac795a] hover:bg-[#8f6348] text-[#fef6e9] px-8 py-4 rounded-full transition-all duration-300 shadow-[0_4px_24px_rgba(172,121,90,0.35)] hover:shadow-[0_6px_32px_rgba(172,121,90,0.5)] text-sm tracking-widest uppercase">
+          <button className="group inline-flex cursor-pointer items-center gap-3 bg-[#ac795a] hover:bg-[#8f6348] text-[#fef6e9] px-8 py-4 rounded-full transition-all duration-300 shadow-[0_4px_24px_rgba(172,121,90,0.35)] hover:shadow-[0_6px_32px_rgba(172,121,90,0.5)] text-sm tracking-widest uppercase">
             Explore Collection
 
             <svg
@@ -71,7 +71,7 @@ export default function Hero() {
             </svg>
           </button>
 
-          <button className="inline-flex items-center gap-2 text-[#fef6e9]/80 hover:text-[#fef6e9] transition-colors duration-200 text-sm tracking-widest uppercase">
+          <button className="inline-flex cursor-pointer items-center gap-2 text-[#fef6e9]/80 hover:text-[#fef6e9] transition-colors duration-200 text-sm tracking-widest uppercase">
             <span className="w-5 h-px bg-current" />
             Bespoke Orders
           </button>

@@ -36,7 +36,7 @@ export default function Banner({ onClose }) {
         </div>
         <button
           onClick={onClose}
-          className="absolute right-4 top-1/2 -translate-y-1/2 text-[#fef6e9]/70 hover:text-[#fef6e9] transition-colors text-base sm:text-lg leading-none"
+          className="absolute right-4 top-1/2 -translate-y-1/2 cursor-pointer text-[#fef6e9]/70 hover:text-[#fef6e9] transition-colors text-base sm:text-lg leading-none"
           aria-label="Dismiss banner"
         >
           ×

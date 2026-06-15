@@ -99,7 +99,7 @@ export default function WhyAloura() {
                 <p className="text-sm text-[#fef6e9]/72 font-sans">
                   Designed to feel calm, polished, and unforgettable.
                 </p>
-                <button className="inline-flex items-center gap-2 bg-[#fef6e9] hover:bg-[#f5ece0] text-[#5c4032] px-6 py-3 rounded-full tracking-widest uppercase text-xs transition-colors duration-300 font-sans">
+                <button className="inline-flex cursor-pointer items-center gap-2 bg-[#fef6e9] hover:bg-[#f5ece0] text-[#5c4032] px-6 py-3 rounded-full tracking-widest uppercase text-xs transition-colors duration-300 font-sans">
                   Discover the craft
                   <svg
                     className="w-3.5 h-3.5"

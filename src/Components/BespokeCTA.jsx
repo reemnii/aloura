@@ -1,6 +1,6 @@
 export default function BespokeCTA() {
   return (
-    <section id="bespoke-cta" className="relative overflow-hidden py-20 px-6 lg:px-16">
+    <section id="bespoke-cta" className="relative overflow-hidden py-10 px-6 lg:px-16">
       <div className="absolute inset-0 bg-gradient-to-br from-[#5c4032] via-[#8f6348] to-[#ac795a]" />
       <div className="absolute inset-0 bg-[#fef6e9]/8" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(254,246,233,0.18)_0%,transparent_55%)]" />
@@ -28,7 +28,7 @@ export default function BespokeCTA() {
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <button className="inline-flex cursor-pointer items-center justify-center gap-2 bg-[#fef6e9] hover:bg-[#f5ece0] text-[#5c4032] px-7 py-3.5 rounded-full tracking-widest uppercase text-xs transition-colors duration-300 font-sans">
+                <button className=" inline-flex flex-row cursor-pointer bg-[#fef6e9]/15 hover:bg-[#fef6e9]/25 border border-[#fef6e9]/25 text-[#fef6e9] text-xs tracking-widest uppercase px-5 py-2.5 rounded-full backdrop-blur-sm transition-all duration-300 font-sans w-auto">
                 Start your bespoke order
                 <svg
                   className="w-3.5 h-3.5"
@@ -40,16 +40,13 @@ export default function BespokeCTA() {
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
               </button>
-              <button className="inline-flex cursor-pointer items-center justify-center gap-2 border border-[#fef6e9]/25 text-[#fef6e9] hover:bg-[#fef6e9]/10 px-7 py-3.5 rounded-full tracking-widest uppercase text-xs transition-colors duration-300 font-sans backdrop-blur-sm">
-                See the process
-              </button>
             </div>
           </div>
 
           <div className="lg:col-span-2">
             <div className="rounded-[1.75rem] border border-[#fef6e9]/15 bg-[#fef6e9]/10 backdrop-blur-sm p-6 sm:p-8 shadow-[0_18px_50px_rgba(59,37,24,0.22)]">
               <p className="text-[#fef6e9]/78 text-xs tracking-[0.25em] uppercase font-sans mb-3">
-                Why custom
+                Why custom?
               </p>
               <ul className="space-y-4">
                 {[

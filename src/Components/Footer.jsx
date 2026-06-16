@@ -12,29 +12,47 @@ export default function Footer() {
             bring a quiet sense of luxury to everyday spaces.
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs tracking-[0.22em] uppercase font-sans text-[#fef6e9]/65">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-xs tracking-[0.22em] uppercase font-sans text-[#fef6e9]/65">
             <a
-              className="cursor-pointer hover:text-[#fef6e9] transition-colors"
               href="#featured-collections"
+              className="cursor-pointer hover:text-[#fef6e9] transition-colors"
             >
               Collections
             </a>
+
             <a
-              className="cursor-pointer hover:text-[#fef6e9] transition-colors"
               href="#why-aloura"
+              className="cursor-pointer hover:text-[#fef6e9] transition-colors"
             >
               Why Aloura
             </a>
+
             <a
+              href="#bespoke-cta"
               className="cursor-pointer hover:text-[#fef6e9] transition-colors"
+            >
+              Bespoke
+            </a>
+
+            <a
+              href="#testimonials"
+              className="cursor-pointer hover:text-[#fef6e9] transition-colors"
+            >
+              Testimonials
+            </a>
+
+            <a
               href="#contact-us"
+              className="cursor-pointer hover:text-[#fef6e9] transition-colors"
             >
               Contact
             </a>
           </div>
 
-          <p className="pt-2 text-[10px] tracking-[0.25em] uppercase text-[#fef6e9]/40 font-sans">
-            © 2026 Aloura
+          <div className="w-16 h-px bg-[#fef6e9]/20 my-2" />
+
+          <p className="text-[10px] tracking-[0.25em] uppercase text-[#fef6e9]/40 font-sans">
+            © 2026 Aloura. All Rights Reserved.
           </p>
         </div>
       </div>

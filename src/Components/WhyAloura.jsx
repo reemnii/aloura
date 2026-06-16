@@ -20,14 +20,14 @@ export default function WhyAloura() {
   return (
     <section
       id="why-aloura"
-      className="relative overflow-hidden py-20 px-6 lg:px-16  bg-[#fef6e9]/8"
+      className="relative overflow-hidden py-10 px-6 lg:px-16  bg-[#fef6e9]/8"
     >
       <div className="absolute inset-0 bg-gradient-to-br from-[#5c4032] via-[#8f6348] to-[#ac795a]" />
       <div className="absolute inset-0  bg-[#fef6e9]/8" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(254,246,233,0.16)_0%,transparent_55%)]" />
 
       <div className="relative max-w-7xl mx-auto">
-        <div className="flex items-center gap-4 mb-4">
+        <div className="flex items-center gap-4 mb-2">
           <span className="block w-10 h-px bg-[#fef6e9]/75" />
           <span className="text-[#fef6e9] text-xs tracking-[0.3em] uppercase font-sans font-medium">
             Why Aloura
@@ -99,7 +99,8 @@ export default function WhyAloura() {
                 <p className="text-sm text-[#fef6e9]/72 font-sans">
                   Designed to feel calm, polished, and unforgettable.
                 </p>
-                <button className="inline-flex cursor-pointer items-center gap-2 bg-[#fef6e9] hover:bg-[#f5ece0] text-[#5c4032] px-6 py-3 rounded-full tracking-widest uppercase text-xs transition-colors duration-300 font-sans">
+                  <button className="inline-flex flex-row gap-1 cursor-pointer bg-[#fef6e9]/15 hover:bg-[#fef6e9]/25 border border-[#fef6e9]/25 text-[#fef6e9] text-xs tracking-widest uppercase px-5 py-2.5 rounded-full backdrop-blur-sm transition-all duration-300 font-sans">
+
                   Discover the craft
                   <svg
                     className="w-3.5 h-3.5"

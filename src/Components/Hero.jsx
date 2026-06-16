@@ -7,7 +7,7 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=1800&auto=format&fit=crop&q=80"
+          src="/hero-bg.png"
           alt="Elegant mirror in a refined interior"
           className="w-full h-full object-cover object-center"
         />
@@ -57,9 +57,8 @@ export default function Hero() {
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row items-center gap-4">
 
-          <button className="group inline-flex cursor-pointer items-center gap-3 bg-[#ac795a] hover:bg-[#8f6348] text-[#fef6e9] px-8 py-4 rounded-full transition-all duration-300 shadow-[0_4px_24px_rgba(172,121,90,0.35)] hover:shadow-[0_6px_32px_rgba(172,121,90,0.5)] text-sm tracking-widest uppercase">
+          <button className="group inline-flex cursor-pointer items-center  bg-[#ac795a] hover:bg-[#8f6348] text-[#fef6e9] text-xs tracking-widest uppercase px-5 py-2.5 rounded-full transition-all duration-300">
             Explore Collection
-
             <svg
               className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200"
               fill="none"
@@ -73,6 +72,7 @@ export default function Hero() {
 
           <button className="inline-flex cursor-pointer items-center gap-2 text-[#fef6e9]/80 hover:text-[#fef6e9] transition-colors duration-200 text-sm tracking-widest uppercase">
             <span className="w-5 h-px bg-current" />
+
             Bespoke Orders
           </button>
 
@@ -91,7 +91,7 @@ export default function Hero() {
             <div key={label} className="flex flex-col items-center gap-1 px-4">
               <span className="text-2xl text-[#fef6e9] font-light italic">
                 {value}
-              </span>
+              </span>            
               <span className="text-[#fef6e9]/65 text-xs tracking-[0.2em] uppercase">
                 {label}
               </span>

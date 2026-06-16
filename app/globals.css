@@ -42,3 +42,34 @@ body {
 .banner-marquee {
   animation: banner-marquee 18s linear infinite;
 }
+
+@layer components {
+  .btn-brown {
+    @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-full border border-[#ac795a] bg-[#ac795a] font-sans uppercase tracking-widest text-[#fef6e9] transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ac795a]/35 focus-visible:ring-offset-2 focus-visible:ring-offset-[#fef6e9];
+    box-shadow: 0 4px 18px rgba(172, 121, 90, 0.18);
+  }
+
+  .btn-brown:hover {
+    background-color: #8f6348;
+    border-color: #8f6348;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(143, 99, 72, 0.28);
+  }
+
+  .btn-brown:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 18px rgba(172, 121, 90, 0.18);
+  }
+
+  .btn-glass {
+    @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-full border font-sans uppercase tracking-widest backdrop-blur-md transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ac795a]/25 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent;
+  }
+
+  .btn-glass:hover {
+    transform: translateY(-2px);
+  }
+
+  .btn-glass:active {
+    transform: translateY(0);
+  }
+}

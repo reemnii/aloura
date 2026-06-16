@@ -41,8 +41,8 @@ const featured = [
 
 export default function FeaturedCollection() {
   return (
-    <section id="featured-collections" className="bg-[#fef6e9] py-12 px-6 lg:px-16">
-      <div className="max-w-7xl mx-auto mb-14">
+    <section id="featured-collections" className="bg-[#fef6e9] py-10 px-6 lg:px-16">
+      <div className="max-w-7xl mx-auto mb-4">
         <div className="flex items-center gap-4 mb-4">
           <span className="block w-10 h-px bg-[#ac795a]" />
           <span className="text-[#ac795a] text-xs tracking-[0.3em] uppercase font-sans font-medium">
@@ -50,14 +50,14 @@ export default function FeaturedCollection() {
           </span>
         </div>
 
-        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+        <div className="flex flex-row sm:flex-row sm:items-end sm:justify-between gap-4 ">
           <h2 className="font-serif text-5xl lg:text-6xl font-light text-[#5c4032] leading-tight">
             Featured <em className="italic text-[#ac795a]">Collections</em>
           </h2>
 
           <a
             href="#"
-            className="inline-flex items-center gap-2 text-[#5c4032]/60 hover:text-[#ac795a] text-xs tracking-[0.2em] uppercase transition-colors duration-200 group self-end sm:self-auto pb-1 border-b border-[#5c4032]/20 hover:border-[#ac795a]"
+            className="inline-flex items-center my-4 gap-2 text-[#5c4032]/60 hover:text-[#ac795a] text-xs tracking-[0.2em] uppercase transition-colors duration-200 group self-end sm:self- border-b border-[#5c4032]/20 hover:border-[#ac795a]"
           >
             View all pieces
             <svg

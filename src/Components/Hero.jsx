@@ -57,7 +57,7 @@ export default function Hero() {
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row items-center gap-4">
 
-          <button className="group inline-flex cursor-pointer items-center  bg-[#ac795a] hover:bg-[#8f6348] text-[#fef6e9] text-xs tracking-widest uppercase px-5 py-2.5 rounded-full transition-all duration-300">
+          <button className="group inline-flex gap-2 cursor-pointer items-center  bg-[#ac795a] hover:bg-[#8f6348] text-[#fef6e9] text-xs tracking-widest uppercase px-5 py-2.5 rounded-full transition-all duration-300">
             Explore Collection
             <svg
               className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200"

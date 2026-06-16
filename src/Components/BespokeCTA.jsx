@@ -28,17 +28,17 @@ export default function BespokeCTA() {
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                <button className=" inline-flex flex-row cursor-pointer bg-[#fef6e9]/15 hover:bg-[#fef6e9]/25 border border-[#fef6e9]/25 text-[#fef6e9] text-xs tracking-widest uppercase px-5 py-2.5 rounded-full backdrop-blur-sm transition-all duration-300 font-sans w-auto">
+                <button className="group inline-flex flex-row gap-2 cursor-pointer bg-[#fef6e9]/15 hover:bg-[#fef6e9]/25 border border-[#fef6e9]/25 text-[#fef6e9] text-xs tracking-widest uppercase px-5 py-2.5 rounded-full backdrop-blur-sm transition-all duration-300 font-sans w-auto">
                 Start your bespoke order
                 <svg
-                  className="w-3.5 h-3.5"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
+              className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2}
+              viewBox="0 0 24 24"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
               </button>
             </div>
           </div>

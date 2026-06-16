@@ -163,11 +163,11 @@ export default function ContactUs() {
 
             <button
               type="submit"
-              className="inline-flex cursor-pointer items-center justify-center gap-2 bg-[#ac795a] hover:bg-[#8f6348] text-[#fef6e9] px-7 py-3.5 rounded-full tracking-widest uppercase text-xs transition-colors duration-300 font-sans"
+              className="group inline-flex cursor-pointer items-center justify-center gap-2 bg-[#ac795a] hover:bg-[#8f6348] text-[#fef6e9] px-7 py-3.5 rounded-full tracking-widest uppercase text-xs transition-colors duration-300 font-sans"
             >
               Send inquiry
               <svg
-                className="w-3.5 h-3.5"
+                className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth={2}

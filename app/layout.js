@@ -3,7 +3,7 @@ export const metadata = {
   title: "Aloura",
   description: "Luxury mirror brand",
   icons: {
-    icon: "/image.png",
+    icon: "/favicon.png",
   },
 };
 
@@ -14,3 +14,4 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+<html lang="en" className="scroll-smooth"></html>

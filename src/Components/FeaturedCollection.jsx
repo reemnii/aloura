@@ -144,12 +144,6 @@ export default function FeaturedCollection() {
                     </span>
                   </div>
                 </div>
-
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[#5c4032]/18">
-                  <button className="cursor-pointer bg-[#fef6e9] text-[#5c4032] text-xs tracking-widest uppercase px-6 py-3 rounded-full font-sans hover:bg-[#ac795a] hover:text-[#fef6e9] transition-colors duration-300 shadow-lg">
-                    View piece
-                  </button>
-                </div>
               </div>
             </div>
           ))}

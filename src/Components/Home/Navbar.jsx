@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Navbar() {
@@ -7,9 +7,9 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
+    { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
     { label: "Collections", href: "#featured-collections" },
-    { label: "Why Aloura", href: "#why-aloura" },
-    { label: "Bespoke", href: "#bespoke-cta" },
     { label: "Testimonials", href: "#testimonials" },
     { label: "Contact", href: "#contact-us" },
   ];
@@ -39,7 +39,7 @@ export default function Navbar() {
         behavior: "smooth",
       });
 
-      // ✅ always close menu when navigating
+
       setMobileMenuOpen(false);
     }
   };
@@ -70,23 +70,29 @@ export default function Navbar() {
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-10">
-          {navLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection(link.href);
-              }}
-              className={`${linkClass} ${
-                scrolled ? "text-[#5c4032]/80" : "text-[#5c4032]/75"
-              }`}
-            >
-              {link.label}
-
-              <span className="absolute left-0 -bottom-2 h-px w-full origin-left scale-x-0 bg-[#ac795a] transition-transform duration-300 group-hover:scale-x-100" />
-            </a>
-          ))}
+          {navLinks.map((link) =>
+  link.href.startsWith("#") ? (
+    <a
+      key={link.label}
+      href={link.href}
+      onClick={(e) => {
+        e.preventDefault();
+        scrollToSection(link.href);
+      }}
+      className={linkClass}
+    >
+      {link.label}
+    </a>
+  ) : (
+    <Link
+      key={link.label}
+      href={link.href}
+      className={linkClass}
+    >
+      {link.label}
+    </Link>
+  )
+)}
         </div>
 
         {/* CTA */}
@@ -108,7 +114,6 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* ✅ Smooth animated mobile menu */}
       <div
         className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out bg-[#fef6e9]/95 backdrop-blur-sm border-t border-[#ac795a]/10 ${
           mobileMenuOpen

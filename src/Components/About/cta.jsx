@@ -33,7 +33,7 @@ export default function Story() {
               ].map((item) => (
                 <div
                   key={item.title}
-                  className="border border-[#5c4032]/10 border-2 rounded-3xl p-8"
+                  className=" border-2 border-[#5c4032]/10 rounded-3xl p-8"
                 >
                   <h3 className="text-2xl font-light mb-4">{item.title}</h3>
 

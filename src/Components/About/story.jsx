@@ -1,10 +1,10 @@
 export default function Story() {
   return (
     <>
-     <main className="bg-[#fef6e9] text-[#5c4032] overflow-hidden">
-        <section className="py-10 px-6">
-          <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-            <div>
+      <main className="bg-[#fef6e9] text-[#5c4032] overflow-hidden">
+        <section className="py-10 px-5">
+          <div className="2xl:container mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div className="max-w-xl mx-auto text-center lg:text-left">
               <span className="uppercase tracking-[0.25em] text-xs text-[#ac795a]">
                 Our Story
               </span>
@@ -22,21 +22,21 @@ export default function Story() {
 
               <p className="leading-relaxed text-[#5c4032]/80">
                 Every collection is designed to create harmony between light,
-                space, and design—bringing warmth and sophistication into every
-                room.
+                space, and design, bringing warmth and sophistication into
+                every room.
               </p>
             </div>
 
-            <div className="relative">
+            <div className="relative max-w-sm mx-auto lg:max-w-sm">
               <img
                 src="/mirror.png"
                 alt="Mirror Collection"
-                className="rounded-4xl shadow-2xl"
+                className="w-full rounded-[2rem] shadow-2xl object-cover"
               />
 
-              <div className="absolute -bottom-8 -left-8 bg-[#fffaf2] border border-[#ac795a]/15 p-6 rounded-3xl shadow-xl max-w-xs">
+              <div className="absolute -bottom-6 -left-4 md:-bottom-8 md:-left-8 bg-[#fffaf2] border border-[#ac795a]/15 p-4 md:p-5 rounded-3xl shadow-xl max-w-100 h-auto">
                 <p className="italic text-[#5c4032]/75">
-                  “Every reflection tells a story.”
+                  "Every reflection tells a story."
                 </p>
               </div>
             </div>

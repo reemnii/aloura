@@ -56,7 +56,7 @@ export default function FeaturedCollection() {
           </h2>
 
           <a
-            href="#"
+            href="/collections"
             className="inline-flex items-center my-4 gap-2 text-[#5c4032]/60 hover:text-[#ac795a] text-xs tracking-[0.2em] uppercase transition-colors duration-200 group self-end sm:self- border-b border-[#5c4032]/20 hover:border-[#ac795a]"
           >
             View all pieces

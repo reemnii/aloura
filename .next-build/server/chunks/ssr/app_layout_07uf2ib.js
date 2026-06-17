@@ -1,3 +1,0 @@
-module.exports=[62925,a=>{"use strict";var b=a.i(7997);a.s(["default",0,function({children:a}){return(0,b.jsx)("html",{lang:"en",className:"h-full antialiased",children:(0,b.jsx)("body",{className:"min-h-full flex flex-col",children:a})})},"metadata",0,{title:"Aloura",description:"Luxury mirror brand",icons:{icon:"/favicon.png"}}])},19325,a=>{a.n(a.i(62925))}];
-
-//# sourceMappingURL=app_layout_07uf2ib.js.map

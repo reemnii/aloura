@@ -1,36 +1,42 @@
-export default function Story() {
+export default function CTA({
+  eyebrow = "Discover Aloura: Our Philosophy",
+  title = "Designed for spaces",
+  highlightedText = " that deserve more.",
+  description = "Explore our collection of luxury mirrors and discover pieces that bring light, depth, and elegance into your home.",
+  items = [
+    {
+      title: "Craftsmanship",
+      text: "Designed with meticulous attention to detail and enduring quality.",
+    },
+    {
+      title: "Timeless Design",
+      text: "Elegant forms inspired by classic architecture and modern interiors.",
+    },
+    {
+      title: "Quiet Luxury",
+      text: "Refined beauty that elevates a space without overwhelming it.",
+    },
+  ],
+  buttonLabel = "Explore Collection",
+}) {
   return (
     <>
       <main className="bg-[#fef6e9] text-[#5c4032] overflow-hidden">
-        <section className="py-10 px-6 text-center bg-[#fffaf2]">
+        <section className="py-10 px-6 text-center bg-[#fef6e9]">
           <span className="uppercase tracking-[0.25em] text-xs text-[#ac795a]">
-            Discover Aloura: Our Philosophy
+            {eyebrow}
           </span>
 
           <h2 className="text-4xl md:text-5xl font-light mt-4 mb-6">
-            Designed for spaces
-            <span className="italic"> that deserve more.</span>
+            {title}
+            <span className="italic text-[#ac795a]">{highlightedText}</span>
           </h2>
 
           <p className="max-w-xl mx-auto text-[#5c4032]/75 mb-10">
-            Explore our collection of luxury mirrors and discover pieces that
-            bring light, depth, and elegance into your home.
+            {description}
           </p>
           <div className="grid md:grid-cols-3 gap-8">
-              {[
-                {
-                  title: "Craftsmanship",
-                  text: "Designed with meticulous attention to detail and enduring quality.",
-                },
-                {
-                  title: "Timeless Design",
-                  text: "Elegant forms inspired by classic architecture and modern interiors.",
-                },
-                {
-                  title: "Quiet Luxury",
-                  text: "Refined beauty that elevates a space without overwhelming it.",
-                },
-              ].map((item) => (
+              {items.map((item) => (
                 <div
                   key={item.title}
                   className=" border-2 border-[#5c4032]/10 rounded-3xl p-8"
@@ -44,7 +50,7 @@ export default function Story() {
               ))}
             </div>
           <button className="btn-brown px-8 py-4 mt-10 text-xs">
-            Explore Collection
+            {buttonLabel}
           </button>
         </section>
       </main>

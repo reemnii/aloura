@@ -1,0 +1,4 @@
+:HL["/_next/static/chunks/448n4jkpjns8-.css","style"]
+:HL["/hero-bg.png","image"]
+:HL["/mirror.png","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"about","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"a7iq0aSEb3GBm2RXuEi8Z"}

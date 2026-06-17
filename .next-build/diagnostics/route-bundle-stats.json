@@ -1,0 +1,57 @@
+[
+  {
+    "route": "/",
+    "firstLoadUncompressedJsBytes": 560363,
+    "firstLoadChunkPaths": [
+      ".next-build\\static\\chunks\\05-c3ty_6dwfk.js",
+      ".next-build\\static\\chunks\\14mrh2-p_w84d.js",
+      ".next-build\\static\\chunks\\2gdthegh4rnzg.js",
+      ".next-build\\static\\chunks\\3z5q_p4msz2ha.js",
+      ".next-build\\static\\chunks\\15orcrkp-_9ct.js",
+      ".next-build\\static\\chunks\\3n7dm2ojtyzwn.js",
+      ".next-build\\static\\chunks\\07u_h6i539_wj.js",
+      ".next-build\\static\\chunks\\turbopack-2jqx-rioszt2c.js"
+    ]
+  },
+  {
+    "route": "/collections",
+    "firstLoadUncompressedJsBytes": 539695,
+    "firstLoadChunkPaths": [
+      ".next-build\\static\\chunks\\05-c3ty_6dwfk.js",
+      ".next-build\\static\\chunks\\14mrh2-p_w84d.js",
+      ".next-build\\static\\chunks\\2dz02f0k8f0ga.js",
+      ".next-build\\static\\chunks\\3z5q_p4msz2ha.js",
+      ".next-build\\static\\chunks\\15orcrkp-_9ct.js",
+      ".next-build\\static\\chunks\\3n7dm2ojtyzwn.js",
+      ".next-build\\static\\chunks\\07u_h6i539_wj.js",
+      ".next-build\\static\\chunks\\turbopack-2jqx-rioszt2c.js"
+    ]
+  },
+  {
+    "route": "/about",
+    "firstLoadUncompressedJsBytes": 530855,
+    "firstLoadChunkPaths": [
+      ".next-build\\static\\chunks\\05-c3ty_6dwfk.js",
+      ".next-build\\static\\chunks\\14mrh2-p_w84d.js",
+      ".next-build\\static\\chunks\\30e36bqfwbjer.js",
+      ".next-build\\static\\chunks\\3z5q_p4msz2ha.js",
+      ".next-build\\static\\chunks\\15orcrkp-_9ct.js",
+      ".next-build\\static\\chunks\\3n7dm2ojtyzwn.js",
+      ".next-build\\static\\chunks\\07u_h6i539_wj.js",
+      ".next-build\\static\\chunks\\turbopack-2jqx-rioszt2c.js"
+    ]
+  },
+  {
+    "route": "/_not-found",
+    "firstLoadUncompressedJsBytes": 514649,
+    "firstLoadChunkPaths": [
+      ".next-build\\static\\chunks\\05-c3ty_6dwfk.js",
+      ".next-build\\static\\chunks\\14mrh2-p_w84d.js",
+      ".next-build\\static\\chunks\\3z5q_p4msz2ha.js",
+      ".next-build\\static\\chunks\\15orcrkp-_9ct.js",
+      ".next-build\\static\\chunks\\3n7dm2ojtyzwn.js",
+      ".next-build\\static\\chunks\\07u_h6i539_wj.js",
+      ".next-build\\static\\chunks\\turbopack-2jqx-rioszt2c.js"
+    ]
+  }
+]

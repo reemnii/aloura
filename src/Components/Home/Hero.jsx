@@ -13,8 +13,8 @@ export default function Hero() {
         />
 
         {/* Overlays */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#5c4032]/75 via-[#ac795a]/45 to-[#fef6e9]/15" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#5c4032]/70 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-br from-[#5c4032]/75 via-[#ac795a]/45 to-[#fef6e9]/15" />
+        <div className="absolute inset-0 bg-linear-to-t from-[#5c4032]/70 via-transparent to-transparent" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_40%,rgba(172,121,90,0.42)_100%)]" />
       </div>
 
@@ -106,7 +106,7 @@ export default function Hero() {
         <span className="text-[10px] tracking-[0.25em] uppercase rotate-90 origin-center translate-y-4">
           Scroll
         </span>
-        <div className="w-px h-12 bg-gradient-to-b from-[#fef6e9]/40 to-transparent" />
+        <div className="w-px h-12 bg-linear-to-b from-[#fef6e9]/40 to-transparent" />
       </div>
 
     </section>

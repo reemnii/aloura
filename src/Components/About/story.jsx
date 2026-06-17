@@ -11,7 +11,7 @@ export default function Story() {
 
               <h2 className="text-4xl md:text-5xl font-light mt-4 mb-8">
                 Luxury in its
-                <span className="italic"> quietest form.</span>
+                <span className="italic text-[#ac795a]"> quietest form.</span>
               </h2>
 
               <p className="leading-relaxed text-[#5c4032]/80 mb-6">
@@ -31,7 +31,7 @@ export default function Story() {
               <img
                 src="/mirror.png"
                 alt="Mirror Collection"
-                className="rounded-[2rem] shadow-2xl"
+                className="rounded-4xl shadow-2xl"
               />
 
               <div className="absolute -bottom-8 -left-8 bg-[#fffaf2] border border-[#ac795a]/15 p-6 rounded-3xl shadow-xl max-w-xs">

@@ -11,7 +11,12 @@ export default function Home() {
     <>
       <Banner />
       <Navbar />
-      <Hero />
+      <Hero
+        eyebrow="About Aloura"
+        title="Crafted to reflect beauty, light & character."
+        subtitle="Aloura was created from a belief that mirrors should be more than functional objects."
+        image="/hero-bg.png"
+      />
       <Story />
       <Collections />
       <CTA />

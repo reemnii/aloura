@@ -92,7 +92,7 @@ export default function Navbar() {
         {/* CTA */}
         <button
           onClick={() => scrollToSection("#featured-collections")}
-          className="hidden md:inline-flex bg-[#ac795a] hover:bg-[#8f6348] text-[#fef6e9] text-xs tracking-widest uppercase px-5 py-2.5 rounded-full transition-all duration-300"
+          className="hidden md:inline-flex cursor-pointer bg-[#ac795a] hover:bg-[#8f6348] text-[#fef6e9] text-xs tracking-widest uppercase px-5 py-2.5 rounded-full transition-all duration-300"
         >
           Shop Now
         </button>

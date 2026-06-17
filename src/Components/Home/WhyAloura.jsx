@@ -100,7 +100,6 @@ export default function WhyAloura() {
                   Designed to feel calm, polished, and unforgettable.
                 </p>
                   <button className="group inline-flex flex-row gap-1 cursor-pointer bg-[#fef6e9]/15 hover:bg-[#fef6e9]/25 border border-[#fef6e9]/25 text-[#fef6e9] text-xs tracking-widest uppercase px-5 py-2.5 rounded-full backdrop-blur-sm transition-all duration-300 font-sans">
-
                   Discover the craft
                   <svg
                     className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200"

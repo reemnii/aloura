@@ -1,8 +1,10 @@
 "use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -11,8 +13,7 @@ export default function Navbar() {
     { label: "About", href: "/about" },
     { label: "Collections", href: "/collections" },
     { label: "Inspiration", href: "/inspiration" },
-    { label: "Testimonials", href: "#testimonials" },
-    { label: "Contact", href: "#contact-us" },
+    
   ];
 
   useEffect(() => {
@@ -45,8 +46,12 @@ export default function Navbar() {
     }
   };
 
-  const linkClass =
-    "group relative font-sans text-[11px] tracking-[0.22em] uppercase transition-all duration-300 hover:-translate-y-0.5 hover:text-[#8f6348]";
+  const isActiveLink = (href) => href === pathname;
+
+  const linkClass = (active) =>
+    `group relative font-sans text-[11px] tracking-[0.22em] uppercase transition-all duration-300 hover:-translate-y-0.5 ${
+      active ? "text-[#8f6348]" : "hover:text-[#8f6348]"
+    }`;
 
   return (
     <nav
@@ -80,17 +85,27 @@ export default function Navbar() {
         e.preventDefault();
         scrollToSection(link.href);
       }}
-      className={linkClass}
+      className={linkClass(false)}
     >
-      {link.label}
+      <span className="relative pb-1">
+        {link.label}
+      </span>
     </a>
   ) : (
     <Link
       key={link.label}
       href={link.href}
-      className={linkClass}
+      aria-current={isActiveLink(link.href) ? "page" : undefined}
+      className={linkClass(isActiveLink(link.href))}
     >
-      {link.label}
+      <span className="relative pb-1">
+        {link.label}
+        <span
+          className={`absolute left-0 -bottom-0.5 h-px bg-current transition-all duration-300 ${
+            isActiveLink(link.href) ? "w-full" : "w-0 group-hover:w-full"
+          }`}
+        />
+      </span>
     </Link>
   )
 )}
@@ -107,7 +122,7 @@ export default function Navbar() {
         {/* Hamburger */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden flex flex-col gap-1.5 text-[#ac795a]"
+          className="md:hidden cursor-pointer flex flex-col gap-1.5 text-[#ac795a]"
         >
           <span className="w-6 h-px bg-current" />
           <span className="w-4 h-px bg-current" />
@@ -124,17 +139,36 @@ export default function Navbar() {
       >
         <div className="flex flex-col py-4">
           {navLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection(link.href); // auto closes too
-              }}
-              className={`${linkClass} px-6 py-4 hover:translate-x-1`}
-            >
-              {link.label}
-            </a>
+            link.href.startsWith("#") ? (
+              <a
+                key={link.label}
+                href={link.href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection(link.href); // auto closes too
+                }}
+                className={`${linkClass(false)} px-6 py-4 hover:translate-x-1`}
+              >
+                {link.label}
+              </a>
+            ) : (
+              <Link
+                key={link.label}
+                href={link.href}
+                aria-current={isActiveLink(link.href) ? "page" : undefined}
+                onClick={() => setMobileMenuOpen(false)}
+                className={`${linkClass(isActiveLink(link.href))} px-6 py-4 hover:translate-x-1`}
+              >
+                <span className="relative pb-1">
+                  {link.label}
+                  <span
+                    className={`absolute left-0 -bottom-0.5 h-px bg-current transition-all duration-300 ${
+                      isActiveLink(link.href) ? "w-full" : "w-0"
+                    }`}
+                  />
+                </span>
+              </Link>
+            )
           ))}
 
           <div className="px-6 pt-3">

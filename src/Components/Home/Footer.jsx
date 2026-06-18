@@ -1,4 +1,14 @@
+import Link from "next/link";
+
 export default function Footer() {
+  const footerLinks = [
+    { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
+    { label: "Collections", href: "/collections" },
+    { label: "Inspiration", href: "/inspiration" },
+    { label: "Mirrors", href: "/mirror" },
+  ];
+
   return (
     <footer className="bg-gradient-to-br from-[#3b2518] via-[#5c4032] to-[#8f6348] px-6 lg:px-16 pb-10 pt-4">
       <div className="max-w-7xl mx-auto border-t border-[#fef6e9]/15 pt-6">
@@ -13,53 +23,21 @@ export default function Footer() {
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-xs tracking-[0.22em] uppercase font-sans text-[#fef6e9]/65">
-            <a
-              href="#featured-collections"
-              className="cursor-pointer hover:text-[#fef6e9] transition-colors"
-            >
-              Collections
-            </a>
-
-            <a
-              href="/inspiration"
-              className="cursor-pointer hover:text-[#fef6e9] transition-colors"
-            >
-              Inspiration
-            </a>
-
-            <a
-              href="#why-aloura"
-              className="cursor-pointer hover:text-[#fef6e9] transition-colors"
-            >
-              Why Aloura
-            </a>
-
-            <a
-              href="#bespoke-cta"
-              className="cursor-pointer hover:text-[#fef6e9] transition-colors"
-            >
-              Bespoke
-            </a>
-
-            <a
-              href="#testimonials"
-              className="cursor-pointer hover:text-[#fef6e9] transition-colors"
-            >
-              Testimonials
-            </a>
-
-            <a
-              href="#contact-us"
-              className="cursor-pointer hover:text-[#fef6e9] transition-colors"
-            >
-              Contact
-            </a>
+            {footerLinks.map((link) => (
+              <Link
+                key={link.label}
+                href={link.href}
+                className="cursor-pointer transition-colors hover:text-[#fef6e9]"
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
 
           <div className="w-16 h-px bg-[#fef6e9]/20 my-2" />
 
           <p className="text-[10px] tracking-[0.25em] uppercase text-[#fef6e9]/40 font-sans">
-            © 2026 Aloura. All Rights Reserved.
+            (c) 2026 Aloura. All Rights Reserved.
           </p>
         </div>
       </div>

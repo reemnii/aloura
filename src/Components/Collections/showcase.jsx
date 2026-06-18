@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SearchBar from "../Home/SearchBar.jsx";
 import { filterGroups, mirrorCollections } from "./content";
 import { getMirrorHref } from "../Mirror/content.js";
@@ -20,6 +20,7 @@ export default function Showcase() {
   const [query, setQuery] = useState("");
   const [filters, setFilters] = useState(defaultFilters);
   const [sortMode, setSortMode] = useState("name");
+  const [visibleCount, setVisibleCount] = useState(3);
 
   const visibleMirrors = mirrorCollections
     .filter((mirror) =>
@@ -47,10 +48,24 @@ export default function Showcase() {
         return left.size.localeCompare(right.size);
       }
 
+      if (sortMode === "price-low") {
+        return (left.price ?? 0) - (right.price ?? 0);
+      }
+
+      if (sortMode === "price-high") {
+        return (right.price ?? 0) - (left.price ?? 0);
+      }
+
       return left.name.localeCompare(right.name);
     });
 
+  useEffect(() => {
+    setVisibleCount(3);
+  }, [query, filters.shape, filters.finish, filters.room, sortMode]);
+
   const bestSellers = mirrorCollections.filter((mirror) => mirror.bestSeller);
+  const displayedMirrors = visibleMirrors.slice(0, visibleCount);
+  const canLoadMore = visibleCount < visibleMirrors.length;
 
   const updateFilter = (key, value) => {
     setFilters((current) => ({
@@ -136,7 +151,8 @@ export default function Showcase() {
 
             <div className="mt-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
               <p className="text-sm text-[#5c4032]/70">
-                Showing {visibleMirrors.length} mirror
+                Showing {Math.min(visibleCount, visibleMirrors.length)} of{" "}
+                {visibleMirrors.length} mirror
                 {visibleMirrors.length === 1 ? "" : "s"}
               </p>
 
@@ -152,6 +168,8 @@ export default function Showcase() {
                   <option value="name">Name</option>
                   <option value="room">Room</option>
                   <option value="size">Size</option>
+                  <option value="price-low">Price: Low to High</option>
+                  <option value="price-high">Price: High to Low</option>
                 </select>
               </div>
             </div>
@@ -165,68 +183,84 @@ export default function Showcase() {
                   finish.
                 </div>
               ) : (
-                <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
-                  {visibleMirrors.map((mirror) => (
-                    <article
-                      key={mirror.name}
-                      className="group overflow-hidden rounded-[2rem] border border-[#ac795a]/12 bg-[#fffaf2] shadow-[0_20px_50px_rgba(92,64,50,0.06)]"
-                    >
-                      <div className="relative aspect-square overflow-hidden">
-                        <img
-                          src={mirror.image}
-                          alt={mirror.name}
-                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#5c4032]/80 via-[#5c4032]/18 to-transparent" />
+                <>
+                  <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
+                    {displayedMirrors.map((mirror) => (
+                      <article
+                        key={mirror.name}
+                        className="group overflow-hidden rounded-[2rem] border border-[#ac795a]/12 bg-[#fffaf2] shadow-[0_20px_50px_rgba(92,64,50,0.06)]"
+                      >
+                        <div className="relative aspect-square overflow-hidden">
+                          <img
+                            src={mirror.image}
+                            alt={mirror.name}
+                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-[#5c4032]/80 via-[#5c4032]/18 to-transparent" />
 
-                        <div className="absolute top-4 left-4 flex flex-wrap gap-2">
-                          <span className="rounded-full border border-[#fef6e9]/20 bg-[#fef6e9]/90 px-3 py-1 text-[10px] uppercase tracking-[0.28em] text-[#8f6348] font-sans">
-                            {mirror.tag}
-                          </span>
-                          {mirror.bestSeller && (
-                            <span className="rounded-full border border-[#fef6e9]/20 bg-[#ac795a] px-3 py-1 text-[10px] uppercase tracking-[0.28em] text-[#fef6e9] font-sans">
-                              Best seller
+                          <div className="absolute top-4 left-4 flex flex-wrap gap-2">
+                            <span className="rounded-full border border-[#fef6e9]/20 bg-[#fef6e9]/90 px-3 py-1 text-[10px] uppercase tracking-[0.28em] text-[#8f6348] font-sans">
+                              {mirror.tag}
                             </span>
-                          )}
-                        </div>
+                            {mirror.bestSeller && (
+                              <span className="rounded-full border border-[#fef6e9]/20 bg-[#ac795a] px-3 py-1 text-[10px] uppercase tracking-[0.28em] text-[#fef6e9] font-sans">
+                                Best seller
+                              </span>
+                            )}
+                          </div>
 
-                        <div className="absolute bottom-0 left-0 right-0 p-6">
-                          <div className="flex items-start justify-between gap-4">
-                            <div className="min-w-0">
-                              <p className="text-[#fef6e9]/72 text-[9px] uppercase tracking-[0.3em] font-sans mb-2">
-                                {mirror.shape} - {mirror.finish}
-                              </p>
-                              <h4 className="text-2xl font-light italic text-[#fef6e9]">
-                                {mirror.name}
-                              </h4>
+                          <div className="absolute bottom-0 left-0 right-0 p-6">
+                            <div className="flex items-start justify-between gap-4">
+                              <div className="min-w-0">
+                                <p className="text-[#fef6e9]/72 text-[9px] uppercase tracking-[0.3em] font-sans mb-2">
+                                  {mirror.shape} - {mirror.finish}
+                                </p>
+                                <h4 className="text-2xl font-light italic text-[#fef6e9]">
+                                  {mirror.name}
+                                </h4>
+                              </div>
+
+                              <span className="rounded-full border border-[#fef6e9]/20 bg-[#fef6e9]/10 px-3 py-1 text-[10px] uppercase tracking-[0.25em] text-[#fef6e9]/90 font-sans">
+                                {mirror.size}
+                              </span>
                             </div>
-
-                            <span className="rounded-full border border-[#fef6e9]/20 bg-[#fef6e9]/10 px-3 py-1 text-[10px] uppercase tracking-[0.25em] text-[#fef6e9]/90 font-sans">
-                              {mirror.size}
-                            </span>
                           </div>
                         </div>
-                      </div>
 
-                      <div className="p-6">
-                        <p className="text-[#5c4032]/75 leading-relaxed">
-                          {mirror.description}
-                        </p>
-                        <div className="mt-5 flex items-center justify-between gap-4">
-                          <span className="text-xs uppercase tracking-[0.25em] text-[#ac795a] font-sans">
-                            {mirror.room}
-                          </span>
-                          <Link
-                            href={getMirrorHref(mirror)}
-                            className="btn-glass border-[#ac795a]/20 bg-white/70 px-4 py-2 text-[10px] text-[#5c4032]"
-                          >
-                            View piece
-                          </Link>
+                        <div className="p-6">
+                          <p className="text-[#5c4032]/75 leading-relaxed">
+                            {mirror.description}
+                          </p>
+                          <div className="mt-5 flex items-center justify-between gap-4">
+                            <span className="text-xs uppercase tracking-[0.25em] text-[#ac795a] font-sans">
+                              {mirror.room}
+                            </span>
+                            <Link
+                              href={getMirrorHref(mirror)}
+                              className="btn-glass border-[#ac795a]/20 bg-white/70 px-4 py-2 text-[10px] text-[#5c4032]"
+                            >
+                              View piece
+                            </Link>
+                          </div>
                         </div>
-                      </div>
-                    </article>
-                  ))}
-                </div>
+                      </article>
+                    ))}
+                  </div>
+
+                  {canLoadMore && (
+                    <div className="mt-8 flex justify-center">
+                      <button
+                        type="button"
+                        onClick={() =>
+                          setVisibleCount((current) => current + 3)
+                        }
+                        className="rounded-full border border-[#ac795a]/20 bg-white px-6 py-3 text-xs uppercase tracking-[0.25em] text-[#5c4032] transition-all duration-200 hover:border-[#ac795a]/35 hover:text-[#ac795a]"
+                      >
+                        Load more
+                      </button>
+                    </div>
+                  )}
+                </>
               )}
             </div>
           

@@ -18,6 +18,8 @@ export const collectionPillars = [
 
 export const mirrorCollections = [
   {
+    id: 1,
+    slug: "aurelia-arc",
     name: "Aurelia Arc",
     tag: "Best seller",
     bestSeller: true,
@@ -30,6 +32,8 @@ export const mirrorCollections = [
       "A graceful arched silhouette with warm brass notes and a gallery-like finish.",
   },
   {
+    id: 2,
+    slug: "celeste-round",
     name: "Celeste Round",
     tag: "Best seller",
     bestSeller: true,
@@ -42,6 +46,8 @@ export const mirrorCollections = [
       "A softened profile that brings quiet symmetry to bedrooms, salons, and reading corners.",
   },
   {
+    id: 3,
+    slug: "orion-slim",
     name: "Orion Slim",
     tag: "Modern classic",
     bestSeller: true,
@@ -54,6 +60,8 @@ export const mirrorCollections = [
       "Minimal in form, crisp in presence, and designed for spaces that want a lighter touch.",
   },
   {
+    id: 4,
+    slug: "solene-halo",
     name: "Solene Halo",
     tag: "New arrival",
     bestSeller: false,
@@ -66,6 +74,8 @@ export const mirrorCollections = [
       "A glowing circular frame that reads soft and luminous without losing definition.",
   },
   {
+    id: 5,
+    slug: "marlow-arch",
     name: "Marlow Arch",
     tag: "Gallery piece",
     bestSeller: false,
@@ -78,6 +88,8 @@ export const mirrorCollections = [
       "A tall architectural frame with a warmer finish for rooms that lean collected and calm.",
   },
   {
+    id: 6,
+    slug: "eira-oval",
     name: "Eira Oval",
     tag: "Soft edge",
     bestSeller: false,
@@ -90,6 +102,8 @@ export const mirrorCollections = [
       "A refined oval silhouette that softens stone, tile, and cabinetry with ease.",
   },
   {
+    id: 7,
+    slug: "noa-prism",
     name: "Noa Prism",
     tag: "Statement",
     bestSeller: false,
@@ -102,6 +116,8 @@ export const mirrorCollections = [
       "Sharp, minimal, and quietly dramatic for interiors that want clean geometry.",
   },
   {
+    id: 8,
+    slug: "vela-vertical",
     name: "Vela Vertical",
     tag: "Tailored",
     bestSeller: false,
@@ -109,11 +125,13 @@ export const mirrorCollections = [
     finish: "Brass",
     room: "Bedroom",
     size: "Tall",
-    image: "/aurelia-arc.jpg",
+    image: "/aurelia-arc.png",
     description:
       "Designed to add vertical rhythm and a subtle hint of luxury to compact walls.",
   },
   {
+    id: 9,
+    slug: "elara-curve",
     name: "Elara Curve",
     tag: "Editor’s pick",
     bestSeller: false,

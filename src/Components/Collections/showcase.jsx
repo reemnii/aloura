@@ -1,8 +1,10 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import SearchBar from "../Home/SearchBar.jsx";
 import { filterGroups, mirrorCollections } from "./content";
+import { getMirrorHref } from "../Mirror/content.js";
 
 const defaultFilters = {
   shape: "All",
@@ -214,9 +216,12 @@ export default function Showcase() {
                           <span className="text-xs uppercase tracking-[0.25em] text-[#ac795a] font-sans">
                             {mirror.room}
                           </span>
-                          <button className="btn-glass border-[#ac795a]/20 bg-white/70 px-4 py-2 text-[10px] text-[#5c4032]">
+                          <Link
+                            href={getMirrorHref(mirror)}
+                            className="btn-glass border-[#ac795a]/20 bg-white/70 px-4 py-2 text-[10px] text-[#5c4032]"
+                          >
                             View piece
-                          </button>
+                          </Link>
                         </div>
                       </div>
                     </article>

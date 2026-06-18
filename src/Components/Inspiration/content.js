@@ -9,6 +9,7 @@ export const inspirationCategories = [
 
 export const featuredInspirationSlides = [
   {
+    mirrorId: 1,
     category: "Living Rooms",
     collection: "Aurelia Arc",
     title: "A living room anchored by light.",
@@ -16,8 +17,10 @@ export const featuredInspirationSlides = [
       "Layered neutrals, warm brass, and an elegant arch mirror that softens the architecture without losing presence.",
     image: "/aurelia-arc.png",
     cta: "Shop the look",
+    href: "/mirror/1-aurelia-arc",
   },
   {
+    mirrorId: 2,
     category: "Bedrooms",
     collection: "Celeste Round",
     title: "A softer ritual for the bedroom.",
@@ -25,8 +28,10 @@ export const featuredInspirationSlides = [
       "Rounded forms, low sheen finishes, and a calm, editorial palette that keeps the room feeling restful.",
     image: "/celeste-round.jpg",
     cta: "Explore details",
+    href: "/mirror/2-celeste-round",
   },
   {
+    mirrorId: 3,
     category: "Entryways",
     collection: "Orion Slim",
     title: "A refined welcome at the threshold.",
@@ -34,8 +39,10 @@ export const featuredInspirationSlides = [
       "Tall vertical proportions and clean lines create a polished first impression for narrow or generous halls.",
     image: "/entryway-arch.png",
     cta: "View collection",
+    href: "/mirror/3-orion-slim",
   },
   {
+    mirrorId: 4,
     category: "Dining Spaces",
     collection: "Solene Halo",
     title: "A table setting with quiet glow.",
@@ -43,8 +50,10 @@ export const featuredInspirationSlides = [
       "Soft reflections and a luminous silhouette that expands candlelight and makes the dining room feel layered.",
     image: "/lumiere-arch.webp",
     cta: "Shop the look",
+    href: "/mirror/4-solene-halo",
   },
   {
+    mirrorId: 6,
     category: "Bathrooms",
     collection: "Eira Oval",
     title: "A bathroom with tailored softness.",
@@ -52,8 +61,10 @@ export const featuredInspirationSlides = [
       "Clean edges, polished warmth, and a shape that feels at home beside stone, tile, and brushed fixtures.",
     image: "/mirror.png",
     cta: "Explore details",
+    href: "/mirror/6-eira-oval",
   },
   {
+    mirrorId: 5,
     category: "Living Rooms",
     collection: "Marlow Arch",
     title: "A gallery wall with depth.",
@@ -61,8 +72,10 @@ export const featuredInspirationSlides = [
       "A sculptural mirror that balances soft upholstery, collected objects, and natural light.",
     image: "/gasp-wall.webp",
     cta: "View collection",
+    href: "/mirror/5-marlow-arch",
   },
   {
+    mirrorId: 8,
     category: "Bedrooms",
     collection: "Vela Vertical",
     title: "Vertical rhythm for quieter rooms.",
@@ -70,8 +83,10 @@ export const featuredInspirationSlides = [
       "A tall, tailored reflection that adds elegance without crowding the space around it.",
     image: "/aurelia-arc.png",
     cta: "Shop the look",
+    href: "/mirror/8-vela-vertical",
   },
   {
+    mirrorId: 7,
     category: "Entryways",
     collection: "Noa Prism",
     title: "A more architectural arrival.",
@@ -79,6 +94,7 @@ export const featuredInspirationSlides = [
       "Sharper geometry, a restrained finish, and a look that reads as confident from the first glance.",
     image: "/entryway-prism.png",
     cta: "Explore details",
+    href: "/mirror/7-noa-prism",
   },
 ];
 

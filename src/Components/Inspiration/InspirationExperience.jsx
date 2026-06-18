@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { featuredInspirationSlides, inspirationCategories } from "./content.js";
@@ -218,9 +219,9 @@ export default function InspirationExperience() {
                       </p>
 
                       <div className="mt-8 flex flex-wrap items-center gap-4">
-                        <button className="btn-brown px-6 py-3 text-[10px]">
+                        <Link href={slide.href} className="btn-brown px-6 py-3 text-[10px]">
                           {slide.cta}
-                        </button>
+                        </Link>
                         <button className="btn-glass border-[#ac795a]/20 bg-white/70 px-6 py-3 text-[10px] text-[#5c4032]">
                           Save to moodboard
                         </button>

@@ -1,7 +1,11 @@
 "use client";
 
+import Link from "next/link";
+import { getMirrorHref } from "../Mirror/content.js";
+
 const featured = [
   {
+    slug: "aurelia-arc",
     id: 1,
     tag: "Editor's Pick",
     name: "Aurelia Arch",
@@ -14,6 +18,7 @@ const featured = [
       "/aurelia-arc.png",
   },
   {
+    slug: "celeste-round",
     id: 2,
     tag: "New Arrival",
     name: "Celeste Round",
@@ -26,6 +31,7 @@ const featured = [
       "/celeste-round.jpg",
   },
   {
+    slug: "orion-slim",
     id: 3,
     tag: "Bestseller",
     name: "Orion Slim",
@@ -103,9 +109,12 @@ export default function FeaturedCollection() {
                 <span className="font-serif text-2xl text-[#fef6e9] font-light">
                   {featured[0].price}
                 </span>
-                <button className="cursor-pointer bg-[#fef6e9]/15 hover:bg-[#fef6e9]/25 border border-[#fef6e9]/25 text-[#fef6e9] text-xs tracking-widest uppercase px-5 py-2.5 rounded-full backdrop-blur-sm transition-all duration-300 font-sans">
+                <Link
+                  href={getMirrorHref(featured[0])}
+                  className="cursor-pointer bg-[#fef6e9]/15 hover:bg-[#fef6e9]/25 border border-[#fef6e9]/25 text-[#fef6e9] text-xs tracking-widest uppercase px-5 py-2.5 rounded-full backdrop-blur-sm transition-all duration-300 font-sans"
+                >
                   View piece
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -131,7 +140,7 @@ export default function FeaturedCollection() {
                   </span>
                 </div>
 
-                <div className="absolute bottom-0 left-0 right-0 p-5">
+              <div className="absolute bottom-0 left-0 right-0 p-5">
                   <p className="text-[#fef6e9]/78 text-[9px] tracking-[0.25em] uppercase font-sans mb-1">
                     {item.material}
                   </p>
@@ -142,6 +151,14 @@ export default function FeaturedCollection() {
                     <span className="font-serif text-xl text-[#fef6e9] font-light ml-4">
                       {item.price}
                     </span>
+                  </div>
+                  <div className="mt-4">
+                    <Link
+                      href={getMirrorHref(item)}
+                      className="inline-flex items-center rounded-full border border-[#fef6e9]/25 bg-[#fef6e9]/12 px-4 py-2 text-[10px] uppercase tracking-widest text-[#fef6e9] backdrop-blur-sm transition-all duration-300 hover:bg-[#fef6e9]/20"
+                    >
+                      View piece
+                    </Link>
                   </div>
                 </div>
               </div>

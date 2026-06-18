@@ -25,7 +25,7 @@ export const mirrorCollections = [
     finish: "Brass",
     room: "Entryway",
     size: "Large",
-    image: "/aurelia-arc.webp",
+    image: "/aurelia-arc.png",
     description:
       "A graceful arched silhouette with warm brass notes and a gallery-like finish.",
   },

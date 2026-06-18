@@ -1,4 +1,6 @@
 import "./globals.css";
+import "swiper/css";
+
 export const metadata = {
   title: "Aloura",
   description: "Luxury mirror brand",
@@ -14,4 +16,3 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-<html lang="en" className="scroll-smooth"></html>

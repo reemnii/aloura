@@ -6,11 +6,12 @@ export default function Hero({
   subtitle,
   image = "/hero-bg.png",
   height = "min-h-[80vh]",
+  as: Wrapper = "main",
 }) {
   const bodyCopy = description ?? subtitle;
 
   return (
-    <main className="bg-[#fef6e9] text-[#5c4032] overflow-hidden">
+    <Wrapper className="bg-[#fef6e9] text-[#5c4032] overflow-hidden">
       <section
         className={`relative ${height} flex items-center justify-center`}
       >
@@ -51,6 +52,6 @@ export default function Hero({
           </p>
         </div>
       </section>
-    </main>
+    </Wrapper>
   );
 }

@@ -11,7 +11,7 @@ const featured = [
     price: "$1,240",
     size: "large",
     image:
-      "/aurelia-arc.webp",
+      "/aurelia-arc.png",
   },
   {
     id: 2,

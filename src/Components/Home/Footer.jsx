@@ -21,6 +21,13 @@ export default function Footer() {
             </a>
 
             <a
+              href="/inspiration"
+              className="cursor-pointer hover:text-[#fef6e9] transition-colors"
+            >
+              Inspiration
+            </a>
+
+            <a
               href="#why-aloura"
               className="cursor-pointer hover:text-[#fef6e9] transition-colors"
             >

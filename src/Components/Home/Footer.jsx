@@ -37,7 +37,7 @@ export default function Footer() {
           <div className="w-16 h-px bg-[#fef6e9]/20 my-2" />
 
           <p className="text-[10px] tracking-[0.25em] uppercase text-[#fef6e9]/40 font-sans">
-            (c) 2026 Aloura. All Rights Reserved.
+            © 2026 Aloura. All Rights Reserved.
           </p>
         </div>
       </div>

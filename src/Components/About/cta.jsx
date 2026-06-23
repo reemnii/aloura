@@ -18,30 +18,32 @@ export default function CTA({
     },
   ],
   buttonLabel = "Explore Collection",
+  containerClassName = "w-full max-w-[1600px] mx-auto px-6 lg:px-20",
 }) {
   return (
     <>
       <main className="bg-[#fef6e9] text-[#5c4032] overflow-hidden">
         <section className="py-10 px-6 text-center bg-[#fef6e9]">
+          <div className={`${containerClassName}`}>
           <span className="uppercase tracking-[0.25em] text-xs text-[#ac795a]">
             {eyebrow}
           </span>
 
-          <h2 className="text-4xl md:text-5xl font-light mt-4 mb-6">
+          <h2 className="text-[clamp(2.5rem,3.6vw,4.5rem)] font-light mt-4 mb-6 max-w-4xl mx-auto">
             {title}
             <span className="italic text-[#ac795a]">{highlightedText}</span>
           </h2>
 
-          <p className="max-w-xl mx-auto text-[#5c4032]/75 mb-10">
+          <p className="max-w-2xl mx-auto text-[#5c4032]/75 mb-10">
             {description}
           </p>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid gap-8 md:grid-cols-3">
               {items.map((item) => (
                 <div
                   key={item.title}
-                  className=" border-2 border-[#5c4032]/10 rounded-3xl p-8"
+                  className="border-2 border-[#5c4032]/10 rounded-3xl p-8 bg-white/35"
                 >
-                  <h3 className="text-2xl font-light mb-4">{item.title}</h3>
+                  <h3 className="text-xl md:text-2xl font-light mb-4">{item.title}</h3>
 
                   <p className="text-[#5c4032]/75 leading-relaxed">
                     {item.text}
@@ -52,6 +54,7 @@ export default function CTA({
           <button className="btn-brown px-8 py-4 mt-10 text-xs">
             {buttonLabel}
           </button>
+          </div>
         </section>
       </main>
     </>

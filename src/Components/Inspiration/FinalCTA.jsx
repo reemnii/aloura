@@ -24,12 +24,7 @@ export default function FinalCTA() {
             <Link href="/collections" className="btn-brown px-6 py-3 text-[10px]">
               Explore collections
             </Link>
-            <Link
-              href="/about"
-              className="btn-glass border-[#ac795a]/18 bg-white/70 px-6 py-3 text-[10px] text-[#5c4032]"
-            >
-              Learn about Aloura
-            </Link>
+            
           </div>
         </div>
       </div>

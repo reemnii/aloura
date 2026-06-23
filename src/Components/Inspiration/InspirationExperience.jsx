@@ -150,15 +150,14 @@ export default function InspirationExperience() {
             ))}
           </div>
         </div>
-        <div className="relative overflow-hidden rounded-4xl border border-[#ac795a]/12 bg-[#fffaf2] shadow-[0_24px_80px_rgba(92,64,50,0.11)]">
+        <div className="relative overflow-visible">
           <button
             type="button"
             aria-label="Previous slide"
             onClick={() => {
               swiperRef.current?.slidePrev();
             }}
-            className="absolute left-4 top-1/2 z-20 -translate-y-1/2 rounded-full border border-[#fef6e9]/20 bg-[#ac795a]  p-3 text-[#fef6e9] backdrop-blur-md transition-all duration-300 hover:bg-[#ac795a]/60"
-          >
+            className="absolute left-0 top-1/2 z-20 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#fef6e9]/20 bg-[#ac795a] p-3 text-[#fef6e9] backdrop-blur-md transition-all duration-300 hover:bg-[#ac795a]/60"          >
             <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24">
               <path d="M15 19l-7-7 7-7" />
             </svg>
@@ -170,68 +169,68 @@ export default function InspirationExperience() {
             onClick={() => {
               swiperRef.current?.slideNext();
             }}
-            className="absolute right-4 top-1/2 z-20 -translate-y-1/2 rounded-full border border-[#fef6e9]/20 p-3 text-[#fef6e9] bg-[#ac795a] backdrop-blur-md transition-all duration-300 hover:bg-[#ac795a]/60"
+            className="absolute right-0 top-1/2 z-20 translate-x-1/2 -translate-y-1/2 rounded-full border border-[#fef6e9]/20 p-3 text-[#fef6e9] bg-[#ac795a] backdrop-blur-md transition-all duration-300 hover:bg-[#ac795a]/60"
           >
             <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24">
               <path d="M9 5l7 7-7 7" />
             </svg>
           </button>
 
-          <Swiper
-            key={activeCategory}
-            spaceBetween={24}
-            slidesPerView={1}
-            onSwiper={(swiper) => {
-              swiperRef.current = swiper;
-            }}
-            onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
-            className="gallery-swiper"
-          >
-            {slides.map((slide) => (
-              <SwiperSlide key={`${slide.category}-${slide.collection}`}>
-                <article className="grid lg:grid-cols-[0.85fr_1.15fr] min-h-130 lg:min-h-140">
-                  <div className="relative min-h-75 lg:min-h-[560px] overflow-hidden">
-                    <Image
-                      src={slide.image}
-                      alt={slide.collection}
-                      fill
-                      sizes="(max-width: 1024px) 100vw, 40vw"
-                      className="object-cover transition-transform duration-700 ease-out hover:scale-[1.03]"
-                    />
-                    <div className="absolute inset-0 bg-linear-to-tr from-[#5c4032]/78 via-[#5c4032]/20 to-transparent" />
-                    <div className="absolute left-6 top-6">
-                      <span className="rounded-full border border-[#fef6e9]/20 bg-[#fef6e9]/90 px-3 py-1 text-[10px] uppercase tracking-[0.28em] text-[#8f6348] backdrop-blur-sm">
-                        {slide.category}
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center bg-linear-to-br from-[#fffaf2] via-[#fff7ed] to-[#f5eadb] p-6 lg:p-8">
-                    <div className="max-w-xl mx-auto lg:mx-0 lg:max-w-lg xl:max-w-xl lg:pl-4">
-                      <p className="text-[10px] uppercase tracking-[0.3em] text-[#ac795a] font-sans">
-                        {slide.collection}
-                      </p>
-                      <h3 className="mt-4 text-3xl lg:text-[2.65rem] font-light leading-tight">
-                        {slide.title}
-                      </h3>
-                      <p className="mt-5 max-w-lg text-[#5c4032]/75 leading-relaxed font-sans">
-                        {slide.description}
-                      </p>
-
-                      <div className="mt-8 flex flex-wrap items-center gap-4">
-                        <Link href={slide.href} className="btn-brown px-6 py-3 text-[10px]">
-                          {slide.cta}
-                        </Link>
-                        <button className="btn-glass border-[#ac795a]/20 bg-white/70 px-6 py-3 text-[10px] text-[#5c4032]">
-                          Save to moodboard
-                        </button>
+          <div className="overflow-hidden rounded-4xl border border-[#ac795a]/12 bg-[#fffaf2] shadow-[0_24px_80px_rgba(92,64,50,0.11)]">
+            <Swiper
+              key={activeCategory}
+              spaceBetween={24}
+              slidesPerView={1}
+              onSwiper={(swiper) => {
+                swiperRef.current = swiper;
+              }}
+              onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+              className="gallery-swiper"
+            >
+              {slides.map((slide) => (
+                <SwiperSlide key={`${slide.category}-${slide.collection}`}>
+                  <article className="grid lg:grid-cols-[0.85fr_1.15fr] min-h-130 lg:min-h-140">
+                    <div className="relative min-h-75 lg:min-h-[560px] overflow-hidden">
+                      <Image
+                        src={slide.image}
+                        alt={slide.collection}
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 40vw"
+                        className="object-cover transition-transform duration-700 ease-out hover:scale-[1.03]"
+                      />
+                      <div className="absolute inset-0 bg-linear-to-tr from-[#5c4032]/78 via-[#5c4032]/20 to-transparent" />
+                      <div className="absolute left-6 top-6">
+                        <span className="rounded-full border border-[#fef6e9]/20 bg-[#fef6e9]/90 px-3 py-1 text-[10px] uppercase tracking-[0.28em] text-[#8f6348] backdrop-blur-sm">
+                          {slide.category}
+                        </span>
                       </div>
                     </div>
-                  </div>
-                </article>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+
+                    <div className="flex items-center bg-linear-to-br from-[#fffaf2] via-[#fff7ed] to-[#f5eadb] p-6 lg:p-8">
+                      <div className="max-w-xl mx-auto lg:mx-0 lg:max-w-lg xl:max-w-xl lg:pl-4">
+                        <p className="text-[10px] uppercase tracking-[0.3em] text-[#ac795a] font-sans">
+                          {slide.collection}
+                        </p>
+                        <h3 className="mt-4 text-3xl lg:text-[2.65rem] font-light leading-tight">
+                          {slide.title}
+                        </h3>
+                        <p className="mt-5 max-w-lg text-[#5c4032]/75 leading-relaxed font-sans">
+                          {slide.description}
+                        </p>
+
+                        <div className="mt-8 flex flex-wrap items-center gap-4">
+                          <Link href={slide.href} className="btn-brown px-6 py-3 text-[10px]">
+                            {slide.cta}
+                          </Link>
+
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         </div>
       </div>
     </section>

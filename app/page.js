@@ -8,7 +8,6 @@ import FeaturedCollection from "../src/Components/Home/FeaturedCollection.jsx";
 import WhyAloura from "../src/Components/Home/WhyAloura.jsx";
 import Testimonials from "../src/Components/Home/Testimonials.jsx";
 import BespokeCTA from "../src/Components/Home/BespokeCTA.jsx";
-import ContactUs from "../src/Components/Home/ContactUs.jsx";
 import Footer from "../src/Components/Home/Footer.jsx";
 
 
@@ -24,7 +23,6 @@ export default function Page() {
       <WhyAloura />
       <Testimonials />
       <BespokeCTA />
-      <ContactUs />
       <Footer />
     </>
   );

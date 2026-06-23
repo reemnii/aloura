@@ -3,7 +3,6 @@
 import { useState } from "react";
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
 export default function ContactUs() {
   const [form, setForm] = useState({
     name: "",
@@ -76,9 +75,7 @@ export default function ContactUs() {
         <div className="flex flex-col items-center gap-5">
           <h2 className="font-serif text-5xl lg:text-6xl font-light text-[#5c4032] leading-tight max-w-3xl">
             Let&apos;s{" "}
-            <em className="italic text-[#ac795a]">
-              shape something bespoke
-            </em>
+            <em className="italic text-[#ac795a]">shape something bespoke</em>
           </h2>
 
           <p className="max-w-2xl text-[#5c4032]/70 text-base sm:text-lg leading-relaxed font-sans">
@@ -86,6 +83,8 @@ export default function ContactUs() {
             turn it into a mirror that feels designed for the moment.
           </p>
         </div>
+
+       
       </div>
 
       <div className="max-w-4xl mx-auto">
@@ -100,15 +99,16 @@ export default function ContactUs() {
               </span>
 
               <input
+                id="contact-name"
                 name="name"
                 value={form.name}
                 onChange={handleChange}
                 type="text"
+                autoComplete="name"
                 placeholder="Your name"
                 className="rounded-2xl border border-[#ac795a]/15 bg-[#fef6e9] px-4 py-3 text-[#5c4032] outline-none transition-colors focus:border-[#ac795a] font-sans"
               />
 
-              {/* ✅ reserved space */}
               <span className="text-sm text-[#8f6348] min-h-[20px]">
                 {errors.name}
               </span>
@@ -120,16 +120,17 @@ export default function ContactUs() {
               </span>
 
               <input
+                id="contact-email"
                 name="email"
                 value={form.email}
                 onChange={handleChange}
                 onBlur={handleBlur}
                 type="email"
+                autoComplete="email"
                 placeholder="you@example.com"
                 className="rounded-2xl border border-[#ac795a]/15 bg-[#fef6e9] px-4 py-3 text-[#5c4032] outline-none transition-colors focus:border-[#ac795a] font-sans"
               />
 
-              {/* ✅ reserved space */}
               <span className="text-sm text-[#8f6348] min-h-[20px]">
                 {errors.email || emailError}
               </span>
@@ -142,6 +143,7 @@ export default function ContactUs() {
             </span>
 
             <textarea
+              id="contact-message"
               name="message"
               value={form.message}
               onChange={handleChange}
@@ -150,7 +152,6 @@ export default function ContactUs() {
               className="rounded-2xl border border-[#ac795a]/15 bg-[#fef6e9] px-4 py-3 text-[#5c4032] outline-none transition-colors focus:border-[#ac795a] font-sans resize-none"
             />
 
-            {/* ✅ reserved space */}
             <span className="text-sm text-[#8f6348] min-h-[20px]">
               {errors.message}
             </span>
@@ -159,6 +160,11 @@ export default function ContactUs() {
           <div className="flex flex-col items-center gap-4">
             <p className="text-sm text-[#5c4032]/60 font-sans text-center">
               We typically respond within 1-2 business days.
+            </p>
+
+            <p className="text-xs sm:text-sm text-[#5c4032]/50 font-sans text-center max-w-md">
+              Helpful details: room size, preferred style, finish, and any
+              inspiration links you want to share.
             </p>
 
             <button

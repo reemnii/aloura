@@ -34,6 +34,13 @@ body {
   font-family: var(--font-serif-stack);
 }
 
+button:not(:disabled),
+a,
+[role="button"],
+summary {
+  cursor: pointer;
+}
+
 @keyframes banner-marquee {
   from {
     transform: translateX(0);

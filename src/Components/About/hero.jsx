@@ -7,6 +7,7 @@ export default function Hero({
   image = "/hero-bg.png",
   height = "min-h-[80vh]",
   as: Wrapper = "main",
+  containerClassName = "w-full max-w-[1600px] mx-auto px-6 lg:px-20",
 }) {
   const bodyCopy = description ?? subtitle;
 
@@ -26,7 +27,9 @@ export default function Hero({
           <div className="absolute inset-0 bg-linear-to-t from-[#5c4032]/70 via-transparent to-transparent" />
         </div>
 
-        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center text-[#fef6e9]">
+        <div
+          className={`relative z-10 text-center text-[#fef6e9] ${containerClassName}`}
+        >
           <div className="flex items-center justify-center gap-3 mb-8">
             <span className="w-8 h-px bg-[#ac795a]" />
 
@@ -37,7 +40,7 @@ export default function Hero({
             <span className="w-8 h-px bg-[#ac795a]" />
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-light leading-[0.95]">
+          <h1 className="text-[clamp(3rem,4.8vw,5.5rem)] font-light leading-[0.95] max-w-5xl mx-auto">
             {title}
 
             {highlightedText && (

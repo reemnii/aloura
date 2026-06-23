@@ -18,6 +18,7 @@ export default function Page() {
         highlightedText="Elegant by design."
         description="Explore sculptural mirrors and refined editions that bring warmth, depth, and a sense of calm to every room."
         image="/hero-bg.png"
+        containerClassName="w-full max-w-[1600px] mx-auto px-6 lg:px-20"
       />
       <Intro
         eyebrow="Collections philosophy"
@@ -26,6 +27,7 @@ export default function Page() {
         description="Explore our mirrors through a softer lens, where shape, finish, and scale are chosen to bring light and character to every interior."
         items={collectionPillars}
         buttonLabel="Browse mirrors"
+        containerClassName="w-full max-w-[1600px] mx-auto"
       />
       <Showcase />
       <CTA />

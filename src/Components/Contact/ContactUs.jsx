@@ -1,14 +1,47 @@
 "use client";
 
 import { useState } from "react";
+import {
+  Accordion,
+  AccordionBody,
+  AccordionHeader,
+} from "@material-tailwind/react";
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const faqItems = [
+  {
+    id: 1,
+    question: "Do you make custom sizes?",
+    answer:
+      "Yes. If you share your measurements and reference images, we can suggest a size and shape that fits the room better.",
+  },
+  {
+    id: 2,
+    question: "How long does a custom inquiry take?",
+    answer:
+      "We usually reply within 1-2 business days with the next steps, availability, or a few styling directions.",
+  },
+  {
+    id: 3,
+    question: "Can I ask for styling advice only?",
+    answer:
+      "Absolutely. You can send us a room photo or a few notes, and we’ll help point you toward the right mirror and finish.",
+  },
+  {
+    id: 4,
+    question: "Do you ship outside your area?",
+    answer:
+      "If shipping is available for your region, we’ll let you know in our reply along with any timing or delivery details.",
+  },
+];
+
 export default function ContactUs() {
   const [form, setForm] = useState({
     name: "",
     email: "",
     message: "",
   });
+  const [openFaq, setOpenFaq] = useState(1);
 
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
@@ -190,6 +223,58 @@ export default function ContactUs() {
             </div>
           )}
         </form>
+
+        <div className="mt-10 rounded-[1.75rem]  border-[#ac795a]/15 bg-[#f7efe4] p-6 sm:p-8 shadow-[0_18px_50px_rgba(92,64,50,0.06)]">
+          <div className="mb-6">
+            <span className="block text-[10px] uppercase tracking-[0.3em] text-[#ac795a] font-sans">
+              FAQ
+            </span>
+            <h3 className="mt-3 text-3xl md:text-4xl font-light text-[#5c4032]">
+              A few quick answers before you 
+              <span className="italic text-[#ac795a]"> a note.</span>
+            </h3>
+          </div>
+
+          <div className="space-y-3">
+            {faqItems.map((item) => (
+              <Accordion
+                key={item.id}
+                open={openFaq === item.id}
+                icon={
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 20 20"
+                    strokeWidth={2}
+                    stroke="currentColor"
+                    className={`h-5 w-5 transition-transform duration-300 ${
+                      openFaq === item.id ? "rotate-180" : ""
+                    }`}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M5 8l5 5 5-5"
+                    />
+                  </svg>
+                }
+                className="rounded-[1.4rem] border border-[#ac795a]/12 bg-[#fef6e9] px-4"
+              >
+                <AccordionHeader
+                  onClick={() =>
+                    setOpenFaq(openFaq === item.id ? 0 : item.id)
+                  }
+                  className="border-b-0 py-4 text-left text-base sm:text-lg font-light text-[#5c4032]"
+                >
+                  {item.question}
+                </AccordionHeader>
+                <AccordionBody className="pb-4 pt-0 text-sm sm:text-base leading-relaxed text-[#5c4032]/75 font-sans">
+                  {item.answer}
+                </AccordionBody>
+              </Accordion>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

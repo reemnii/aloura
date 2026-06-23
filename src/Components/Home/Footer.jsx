@@ -6,7 +6,7 @@ export default function Footer() {
     { label: "About", href: "/about" },
     { label: "Collections", href: "/collections" },
     { label: "Inspiration", href: "/inspiration" },
-    { label: "Mirrors", href: "/mirror" },
+    { label: "Contact", href: "/contact" },
   ];
 
   return (

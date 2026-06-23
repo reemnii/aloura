@@ -226,9 +226,13 @@ export default function ContactUs() {
 
         <div className="mt-10 rounded-[1.75rem]  border-[#ac795a]/15 bg-[#f7efe4] p-6 sm:p-8 shadow-[0_18px_50px_rgba(92,64,50,0.06)]">
           <div className="mb-6">
-            <span className="block text-[10px] uppercase tracking-[0.3em] text-[#ac795a] font-sans">
-              FAQ
-            </span>
+            <div className="flex items-center justify-center gap-4 mb-4">
+          <span className="block w-10 h-px bg-[#ac795a]" />
+          <span className="text-[#ac795a] text-xs tracking-[0.3em] uppercase font-sans font-medium">
+            FAQ
+          </span>
+          <span className="block w-10 h-px bg-[#ac795a]" />
+        </div>
             <h3 className="mt-3 text-3xl md:text-4xl font-light text-[#5c4032]">
               A few quick answers before you 
               <span className="italic text-[#ac795a]"> a note.</span>

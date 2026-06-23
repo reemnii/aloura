@@ -24,6 +24,7 @@ export default function Page() {
         description="Discover how mirrors transform interiors through light, proportion, and the quiet confidence of considered design."
         image="/hero-bg.png"
         height="min-h-[82vh]"
+        containerClassName="w-full max-w-7xl mx-auto px-6 lg:px-12"
       />
       <InspirationExperience />
       <MoodboardSwiper />

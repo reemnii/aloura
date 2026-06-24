@@ -51,7 +51,7 @@ export default async function Page({ params }) {
     }));
 
   return (
-    <main className="bg-[#fef6e9] text-[#5c4032] overflow-hidden">
+    <main className="bg-[#fef6e9] text-[#5c4032]">
       <Banner />
       <Navbar />
       <MirrorDetailPage

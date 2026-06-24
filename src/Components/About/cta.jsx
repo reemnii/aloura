@@ -22,8 +22,8 @@ export default function CTA({
 }) {
   return (
     <>
-      <main className="bg-[#fef6e9] text-[#5c4032] overflow-hidden">
-        <section className="py-10 px-6 text-center bg-[#fef6e9]">
+      <main className=" text-[#5c4032] overflow-hidden">
+        <section className="py-10 px-6 text-center">
           <div className={`${containerClassName}`}>
           <span className="uppercase tracking-[0.25em] text-xs text-[#ac795a]">
             {eyebrow}
@@ -41,7 +41,7 @@ export default function CTA({
               {items.map((item) => (
                 <div
                   key={item.title}
-                  className="border-2 border-[#5c4032]/10 rounded-3xl p-8 bg-white/35"
+                  className="border-2 border-[#5c4032]/10 rounded-3xl p-8"
                 >
                   <h3 className="text-xl md:text-2xl font-light mb-4">{item.title}</h3>
 

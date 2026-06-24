@@ -27,7 +27,7 @@ export default function ProductInfo({
           {description}
         </p>
 
-        <div className="mt-6 flex items-end gap-4">
+        <div className="mt-2 flex items-end gap-4">
           <span className="text-3xl md:text-4xl font-light text-[#5c4032]">
             {price}
           </span>
@@ -36,7 +36,7 @@ export default function ProductInfo({
           </span>
         </div>
 
-        <div className="mt-6 rounded-[1.5rem] border border-[#ac795a]/12 bg-[#fef6e9] p-4 md:p-5">
+        <div className="mt-2 rounded-[1.5rem] p-4 md:p-5">
           <div className="grid gap-4 sm:grid-cols-2">
             {[
               { label: "Dimensions", value: dimensions },
@@ -59,7 +59,7 @@ export default function ProductInfo({
           </div>
         </div>
 
-        <div className="mt-6 flex flex-wrap gap-4">
+        <div className="mt-2 flex flex-wrap gap-4">
           <button className="btn-brown px-6 py-3 text-[10px]">{ctaPrimary}</button>
           <button className="btn-glass border-[#ac795a]/18 bg-white/70 px-6 py-3 text-[10px] text-[#5c4032]">
             {ctaSecondary}
